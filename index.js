@@ -15,14 +15,14 @@ require("dotenv").config();
 
 app.use(express.json());
 app.use((req, res, next) => {
-  res.append('Access-Control-Allow-Origin', 'http://localhost:5173');
+  res.append('Access-Control-Allow-Origin', 'https://front-commercomplet.vercel.app');
   res.append('Access-Control-Allow-Methods', 'get, put, post, delete');
   next();
 })
 
 app.use(cors({
   credentials: true,
-  origin: 'http://localhost:5173', 
+  origin: 'https://front-commercomplet.vercel.app', 
 }));
 
 app.use("/api/register", register);
